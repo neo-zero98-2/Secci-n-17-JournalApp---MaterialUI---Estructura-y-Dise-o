@@ -6,7 +6,8 @@ const DRAWER_WIDTH = 240;
 // un layout es en onde se coloca el Grid inicial de algun contenido de componentes
 export const JournalLayout = ({ children }) => {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} 
+      className='animate__animated animate__fadeIn animate__faster' >
       <NavBar drawerWidth={DRAWER_WIDTH}/>
       <SideBar drawerWidth={DRAWER_WIDTH}/>
       <Box sx={{ flexGrow: 1, p: 3 }}>
