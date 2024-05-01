@@ -1,4 +1,5 @@
 export const fileUpload = async (file) => {
+    if(!file) return null;
     const url = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`;
     const formData = new FormData();
 
@@ -10,6 +11,8 @@ export const fileUpload = async (file) => {
         method: "POST",
         body: formData
     });
+
+    console.log(file);
 
     if (!resp.ok) throw new Error('No se pudo subir la imagen');
     console.log("resp ", resp);

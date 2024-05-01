@@ -4,7 +4,7 @@ import { clearNotesLogout } from "../journal";
 
 export const checkingAuthentication = ( email, password ) => {
     return async ( dispatch ) => {
-        dispatch(login())
+        dispatch(checkingCredentials());
     }
 }
 
